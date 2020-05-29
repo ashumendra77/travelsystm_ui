@@ -108,21 +108,29 @@ class _MySecondPageState extends State<MySecondPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  CircleAvatar(
-                    child: Text("A"),
-                  ),
-                  Icon(
-                    Icons.toc,
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    CircleAvatar(
+                      child: Text("A"),
+                    ),
+                    Icon(
+                      Icons.toc,
+                    )
+                  ],
+                ),
               ),
-              Text(
-                "Let's enjoy your vacation!",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              SizedBox(height: 30),
+              Padding(
+                padding: EdgeInsets.only(left: 20.0, right: 110),
+                child: Text(
+                  "Let's enjoy your vacation!",
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                ),
               ),
+              SizedBox(height: 10),
               Container(
                 height: 50,
                 margin: EdgeInsets.only(left: 15, right: 15, top: 10),
@@ -164,6 +172,7 @@ class _MySecondPageState extends State<MySecondPage> {
               ),
               SizedBox(height: 20),
               Container(
+                  margin: EdgeInsets.only(left: 20),
                   height: 50,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -174,6 +183,7 @@ class _MySecondPageState extends State<MySecondPage> {
                   )),
               SizedBox(height: 20),
               Container(
+                  margin: EdgeInsets.only(left: 20),
                   height: 250,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -182,6 +192,7 @@ class _MySecondPageState extends State<MySecondPage> {
                       return getTavel(map.value);
                     }).toList(),
                   )),
+              SizedBox(height: 10)
             ],
           )
         ],
