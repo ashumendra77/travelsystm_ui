@@ -24,8 +24,8 @@ class _MySecondPageState extends State<MySecondPage> {
       },
       child: Container(
         height: 50,
-        width: 100,
-        margin: EdgeInsets.only(left: 10),
+        //  width: 100,
+        // margin: EdgeInsets.only(left: 10),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -34,17 +34,23 @@ class _MySecondPageState extends State<MySecondPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              barItem[index],
-              style: TextStyle(
-                fontSize: 12,
+            Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Text(
+                barItem[index],
+                style: TextStyle(
+                    fontSize: 18,
+                    color: selectbarItem == index ? Colors.pink : Colors.black),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
-            SizedBox(height: 6),
+            SizedBox(
+              height: 5,
+              // width: 10,
+            ),
             CircleAvatar(
               backgroundColor:
-                  selectbarItem == index ? Colors.black : Colors.transparent,
+                  selectbarItem == index ? Colors.pink : Colors.transparent,
               radius: 3,
             )
           ],
